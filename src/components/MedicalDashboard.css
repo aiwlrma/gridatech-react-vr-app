@@ -1,0 +1,302 @@
+.dashboard {
+  width: 672px;
+  height: 1080px;
+  background: #F7F8FA;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0;
+}
+
+.chart-icon {
+  font-size: 20px;
+  color: #6B7280;
+}
+
+/* Section */
+.section {
+  margin-bottom: 32px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #F3F4F6;
+}
+
+/* Procedure Accuracy */
+.accuracy-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accuracy-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.item-label {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.completed {
+  color: #059669;
+}
+
+.status.inadequate {
+  color: #D97706;
+}
+
+.checkmark {
+  color: #059669;
+  font-weight: bold;
+}
+
+.x-mark {
+  color: #D97706;
+  font-weight: bold;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  width: 120px;
+  height: 8px;
+  background: #E5E7EB;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #8B5CF6;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.purple {
+  background: #8B5CF6;
+}
+
+.progress-text {
+  font-size: 12px;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+/* Nursing Skill Analysis */
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.skill-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.accuracy-text {
+  font-size: 12px;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.status-dot {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.status-dot.appropriate {
+  color: #3B82F6;
+}
+
+.status-dot.inadequate {
+  color: #F59E0B;
+}
+
+.status-text {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Communication Competency */
+.communication-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.communication-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+/* Overall Evaluation */
+.overall-section {
+  text-align: center;
+}
+
+.overall-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.donut-chart {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.donut-outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #8B5CF6 0deg 288deg,
+    #F59E0B 288deg 360deg,
+    #E5E7EB 360deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.donut-outer::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #F7F8FA;
+  border-radius: 50%;
+}
+
+.donut-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grade {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1F2937;
+  margin-bottom: 4px;
+}
+
+.score {
+  font-size: 16px;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.evaluation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.detail-dot {
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.detail-dot.purple {
+  color: #8B5CF6;
+}
+
+.detail-dot.yellow {
+  color: #F59E0B;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+  flex: 1;
+  text-align: left;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: #1F2937;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}
